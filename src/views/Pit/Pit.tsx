@@ -71,13 +71,13 @@ const Pit: React.FC = () => {
                 <ExchangeCard
                   action="Purchase"
                   fromToken={tombFinance.TOMB}
-                  fromTokenName="2OMB"
+                  fromTokenName="MOON"
                   toToken={tombFinance.TBOND}
-                  toTokenName="2BOND"
+                  toTokenName="MBOND"
                   priceDesc={
                     !isBondPurchasable
-                      ? '2OMB is over peg'
-                      : getDisplayBalance(bondsPurchasable, 18, 4) + ' 2BOND available for purchase'
+                      ? 'MOON is over peg'
+                      : getDisplayBalance(bondsPurchasable, 18, 4) + ' MBOND available for purchase'
                   }
                   onExchange={handleBuyBonds}
                   disabled={!bondStat || isBondRedeemable}
@@ -85,14 +85,14 @@ const Pit: React.FC = () => {
               </StyledCardWrapper>
               <StyledStatsWrapper>
                 <ExchangeStat
-                  tokenName="2OMB"
+                  tokenName="MOON"
                   description="Last-Hour TWAP Price"
                   price={getDisplayBalance(cashPrice, 18, 4)}
                 />
                 <Spacer size="md" />
                 <ExchangeStat
-                  tokenName="2BOND"
-                  description="Current Price: (2OMB)^2"
+                  tokenName="MBOND"
+                  description="Current Price: (MOON)^2"
                   price={Number(bondStat?.tokenInFtm).toFixed(2) || '-'}
                 />
               </StyledStatsWrapper>
@@ -100,13 +100,13 @@ const Pit: React.FC = () => {
                 <ExchangeCard
                   action="Redeem"
                   fromToken={tombFinance.TBOND}
-                  fromTokenName="2BOND"
+                  fromTokenName="MBOND"
                   toToken={tombFinance.TOMB}
-                  toTokenName="2OMB"
-                  priceDesc={`${getDisplayBalance(bondBalance)} 2BOND Available in wallet`}
+                  toTokenName="MOON"
+                  priceDesc={`${getDisplayBalance(bondBalance)} MBOND Available in wallet`}
                   onExchange={handleRedeemBonds}
                   disabled={!bondStat || bondBalance.eq(0) || !isBondRedeemable}
-                  disabledDescription={!isBondRedeemable ? `Enabled when 2OMB > ${BOND_REDEEM_PRICE} FTM` : null}
+                  disabledDescription={!isBondRedeemable ? `Enabled when MOON > ${BOND_REDEEM_PRICE} FTM` : null}
                 />
               </StyledCardWrapper>
             </StyledBond>

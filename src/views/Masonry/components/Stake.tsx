@@ -96,7 +96,7 @@ const Stake: React.FC = () => {
                   style={{ marginTop: '20px' }}
                   onClick={approve}
                 >
-                  Approve 2SHARES
+                  Approve MSHARES
                 </Button>
               ) : (
                 <>

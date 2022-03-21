@@ -7,11 +7,11 @@ const theme = {
     grey,
     purple,
     primary: {
-      light: red[200],
-      main: red[500],
+      light: white,
+      main: white,
     },
     secondary: {
-      main: teal[200],
+      main: white,
     },
     white,
     teal,

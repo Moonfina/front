@@ -150,6 +150,7 @@ const StyledCardHeader = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
+  
 `;
 const StyledCardActions = styled.div`
   display: flex;

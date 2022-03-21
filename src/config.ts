@@ -152,6 +152,8 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     closedForStaking: false,
     genesisFinished: false
   },
+
+  /*
   TombWethRewardPool: {
     name: 'Stake wETH, earn 2OMB',
     poolId: 1,
@@ -165,6 +167,8 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     closedForStaking: false,
     genesisFinished: false
   },
+  */
+ 
   TombShibaRewardPool: {
     name: 'Stake MIM, earn 2OMB',
     poolId: 2,
@@ -216,7 +220,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     closedForStaking: true,
   },
   TombFtmLPTShareRewardPool: {
-    name: 'Earn 2SHARE by 2OMB-WFTM LP',
+    name: 'Earn MSHARE by MOON-WFTM LP',
     poolId: 0,
     sectionInUI: 2,
     contract: 'TombFtmLPTShareRewardPool',
@@ -228,7 +232,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     closedForStaking: false,
   },
   TshareFtmLPTShareRewardPool: {
-    name: 'Earn 2SHARE by 2SHARE-WFTM LP',
+    name: 'Earn MSHARE by MSHARE-WFTM LP',
     poolId: 1,
     sectionInUI: 2,
     contract: 'TshareFtmLPTShareRewardPool',

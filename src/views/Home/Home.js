@@ -108,7 +108,7 @@ const Home = () => {
   const StyledLink = styled.a`
     font-weight: 700;
     text-decoration: none;
-  
+    color: #f7d76f;
   `;
 
   const [onPresentTombZap, onDissmissTombZap] = useModal(
@@ -151,9 +151,9 @@ const Home = () => {
               <h2>Welcome to Moon Finance!</h2>
               <p>Pegged to the price of 1 FTM via seigniorage.</p>
               <p>
-              <StyledLink href="/farms">Stake</StyledLink> your 2OMB-FTM LP tokens to earn 2SHARE seigniorage rewards.
+              <StyledLink href="/farms">Stake</StyledLink> your MOON-FTM LP tokens to earn MSHARE seigniorage rewards.
               </p>
-              <p>To maximize profits, stake your harvested 2SHAREs in the <StyledLink href="/boardroom">Boardroom</StyledLink> to earn more 2OMB!</p>
+              <p>To maximize profits, stake your harvested MSHAREs in the <StyledLink href="/boardroom">Boardroom</StyledLink> to earn more MOON!</p>
             </Box>
           </Paper>
 
@@ -164,7 +164,7 @@ const Home = () => {
         <Grid container justify="center">
             <Box mt={3} style={{ width: '1000px' }}>
             <Alert variant="filled" severity="warning">
-                Do your own research before investing. Investing is risky and may result in monetary loss. 2omb is beta software and may contain bugs. By using 2omb, you agree that the 2omb and 3omb team is not responsible for any financial losses from investing in 2omb or 3omb.
+                Do your own research before investing. Investing is risky and may result in monetary loss. moon is beta software and may contain bugs. By using moon, you agree that the moon and 3omb team is not responsible for any financial losses from investing in 2omb or 3omb.
             </Alert>
             </Box>
         </Grid>
@@ -184,13 +184,13 @@ const Home = () => {
           <Card style={{ height: '100%' }}>
             <CardContent align="center" style={{ marginTop: '2.5%' }}>
               {/* <h2 style={{ marginBottom: '20px' }}>Wallet Balance</h2> */}
-              {/* <Button color="primary" href="/masonry" variant="contained" style={{ marginRight: '25px' }}>
-                Stake Now
-              </Button> */}
+              <Button color="yellow" href="/boardroom" variant="contained" style={{ marginRight: '25px' }}>
+                Stake
+              </Button>
               {/* <Button href="/cemetery" variant="contained" style={{ marginRight: '25px' }}>
                 Stake Now
               </Button> */}
-              <Button color="primary" href="/farms" variant="contained" style={{ marginRight: '25px' }}>
+              <Button color="yellow" href="/farms" variant="contained" style={{ marginRight: '25px' }}>
                 Farms
               </Button>
               <Button
@@ -346,7 +346,7 @@ const Home = () => {
               </Box>
               <Box mt={2}>
                 <span style={{ fontSize: '26px' }}>
-                  {tombLPStats?.tokenAmount ? tombLPStats?.tokenAmount : '-.--'} 2OMB /{' '}
+                  {tombLPStats?.tokenAmount ? tombLPStats?.tokenAmount : '-.--'} MOON /{' '}
                   {tombLPStats?.ftmAmount ? tombLPStats?.ftmAmount : '-.--'} FTM
                 </span>
               </Box>
@@ -374,7 +374,7 @@ const Home = () => {
               </Box>
               <Box mt={2}>
                 <span style={{ fontSize: '26px' }}>
-                  {tshareLPStats?.tokenAmount ? tshareLPStats?.tokenAmount : '-.--'} 2SHARES /{' '}
+                  {tshareLPStats?.tokenAmount ? tshareLPStats?.tokenAmount : '-.--'} MSHARES /{' '}
                   {tshareLPStats?.ftmAmount ? tshareLPStats?.ftmAmount : '-.--'} FTM
                 </span>
               </Box>
