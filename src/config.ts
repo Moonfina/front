@@ -22,6 +22,7 @@ const configurations: { [env: string]: Configuration } = {
       '2OMB-2SHARE-LP': ['0xd9B5f00d183df52D717046521152303129F088DD', 18],
       'XOMB': ['0xB744963604f069d9AC04808b844791E9d18Bfa79', 18],
       'XOMB-FTM-LP': ['0x284F865E8E43C21cc54c2b944fB90CA644c4F34a', 18],
+
      
 
     },
@@ -50,9 +51,12 @@ const configurations: { [env: string]: Configuration } = {
       'XOMB-FTM-LP': ['0x284F865E8E43C21cc54c2b944fB90CA644c4F34a', 18],
       'XSHARES': ['0x3Af15D1e310DD7Adfaf4a9DdD0E366C6F0FF9Fa6', 18],
       'XSHARES-FTM-LP': ['0x5b056Cb1c47E57f282b1Dc92a93aE1A02e81C780', 18],
-
+      'MOON': ['0x2a9a3bb91Cbd47E737AbaDba72E70bE73F4FA5e6', 18],
+      'MOON-FTM-LP': ['0x2a9a3bb91Cbd47E737AbaDba72E70bE73F4FA5e6', 18],
+      'MSHARES': ['0x09EBe927C763E2D236d50f6DC85E14e4D53Afd42', 18],
+      'MSHARES-FTM-LP': ['0x2a9a3bb91Cbd47E737AbaDba72E70bE73F4FA5e6', 18],
     },
-    baseLaunchDate: new Date('2021-06-02 13:00:00Z'),
+    baseLaunchDate: new Date('2022-03-31 21:30:00Z'),
     bondLaunchesAt: new Date('2020-12-03T15:00:00Z'),
     masonryLaunchesAt: new Date('2020-12-11T00:00:00Z'),
     refreshInterval: 10000,
@@ -196,7 +200,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     genesisFinished: false
   },
   TombFtmLPTombRewardPool: {
-    name: 'Earn 2OMB by 2OMB-WFTM',
+    name: 'Earn MOON by 2OMB-WFTM',
     poolId: 0,
     sectionInUI: 1,
     contract: 'TombFtmLpTombRewardPool',

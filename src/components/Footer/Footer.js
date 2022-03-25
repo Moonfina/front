@@ -44,24 +44,24 @@ const Footer = () => {
           <Grid item xs={6}>
             <Typography variant="body2" color="textSecondary" align="left">
               <Link color="inherit" href="/">
-                2omb
+                moon
               </Link>
             </Typography>
           </Grid>
           <Grid item xs={6} style={{ textAlign: 'right' }}>
             <a
-              href="https://twitter.com/_2omb"
+              href="https://twitter.com/_MoonFinance"
               rel="noopener noreferrer"
               target="_blank"
               className={classes.link}
             >
               <img alt="twitter" src={TwitterImage} className={classes.img} />
             </a>
-            <a href="https://bit.ly/3AUcaBI" rel="noopener noreferrer" target="_blank" className={classes.link}>
+            <a href="https://t.me/+wyAF5Uwx_SljM2Qx" rel="noopener noreferrer" target="_blank" className={classes.link}>
               <img alt="telegram" src={TelegramImage} className={classes.img} />
             </a>
             <a
-              href="https://github.com/2omb"
+              href="https://github.com/Moonfina"
               rel="noopener noreferrer"
               target="_blank"
               className={classes.link}

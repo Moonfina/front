@@ -58,7 +58,7 @@ const Cemetery = () => {
                   </Grid>
                 </div>
 
-                {/* <div hidden={activeBanks.filter((bank) => bank.sectionInUI === 1).length === 0}>
+                 <div hidden={activeBanks.filter((bank) => bank.sectionInUI === 1).length === 0}>
                   <Typography color="textPrimary" variant="h4" gutterBottom style={{ marginTop: '20px' }}>
                     Earn 2OMB by staking 2OMB-WFTM
                   </Typography>
@@ -74,7 +74,7 @@ const Cemetery = () => {
                         </React.Fragment>
                       ))}
                   </Grid>
-                </div> */}
+                </div> 
 
                 <div hidden={activeBanks.filter((bank) => bank.sectionInUI === 0).length === 0}>
                   <Typography color="textPrimary" variant="h4" gutterBottom style={{ marginTop: '20px' }}>

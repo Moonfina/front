@@ -150,17 +150,22 @@ const Home = () => {
             <Box p={4}>
               <h2>Welcome to Moon Finance!</h2>
               <p>Pegged to the price of 1 FTM via seigniorage.</p>
-              <p>
+              <p><font color='yellow'>GenesisPool Start = 2022-03-30 15:00 UTC</font></p>
+              <p><font color='yellow'>GenesisPool End = 2022-04-02 15:00 UTC</font></p>
+              <p><font color='yellow'>Tshares RewardPool start = 2022-04-02 15:00 UTC</font></p>
+              <p><font color='yellow'>Boardroom start = 2022-04-03 15:00 UTC</font></p>
+              {/*<p>
               <StyledLink href="/farms">Stake</StyledLink> your MOON-FTM LP tokens to earn MSHARE seigniorage rewards.
               </p>
               <p>To maximize profits, stake your harvested MSHAREs in the <StyledLink href="/boardroom">Boardroom</StyledLink> to earn more MOON!</p>
-            </Box>
+            */}
+              </Box>
           </Paper>
 
 
 
         </Grid>
-
+        {/*
         <Grid container justify="center">
             <Box mt={3} style={{ width: '1000px' }}>
             <Alert variant="filled" severity="warning">
@@ -168,6 +173,7 @@ const Home = () => {
             </Alert>
             </Box>
         </Grid>
+        */}
 
         {/* TVL */}
         <Grid item xs={12} sm={4}>
@@ -317,16 +323,16 @@ const Home = () => {
               <Box>
                 <span style={{ fontSize: '16px' }}>${tBondPriceInDollars ? tBondPriceInDollars : '-.--'}</span>
               </Box>
-              <span style={{ fontSize: '12px' }}>
+              {/*<span style={{ fontSize: '12px' }}>
                 Market Cap: $-.-- <br />
                 Circulating Supply: ------ <br />
                 Total Supply: ------
-              </span>
-              {/* <span style={{ fontSize: '12px' }}>
+              </span>*/}
+               <span style={{ fontSize: '12px' }}>
                 Market Cap: ${(tBondCirculatingSupply * tBondPriceInDollars).toFixed(2)} <br />
                 Circulating Supply: {tBondCirculatingSupply} <br />
                 Total Supply: {tBondTotalSupply}
-              </span> */}
+              </span> 
             </CardContent>
           </Card>
         </Grid>
