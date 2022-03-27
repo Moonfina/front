@@ -51,10 +51,10 @@ const configurations: { [env: string]: Configuration } = {
       'XOMB-FTM-LP': ['0x284F865E8E43C21cc54c2b944fB90CA644c4F34a', 18],
       'XSHARES': ['0x3Af15D1e310DD7Adfaf4a9DdD0E366C6F0FF9Fa6', 18],
       'XSHARES-FTM-LP': ['0x5b056Cb1c47E57f282b1Dc92a93aE1A02e81C780', 18],
-      'MOON': ['0x2a9a3bb91Cbd47E737AbaDba72E70bE73F4FA5e6', 18],
-      'MOON-FTM-LP': ['0x2a9a3bb91Cbd47E737AbaDba72E70bE73F4FA5e6', 18],
-      'MSHARES': ['0x09EBe927C763E2D236d50f6DC85E14e4D53Afd42', 18],
-      'MSHARES-FTM-LP': ['0x2a9a3bb91Cbd47E737AbaDba72E70bE73F4FA5e6', 18],
+      'MOON': ['0x76a10A9A4450Afea32b1576f017585425B452768', 18],
+      'MOON-FTM-LP': ['0xd85313D0bd12A9f5b5953DFc02d57bC74534d10b', 18],
+      'MSHARES': ['0x912b4BA05BE04784808635f0319D361fB0ecf785', 18],
+      'MSHARES-FTM-LP': ['0x631D7d43309a40fa375F6e036d197c3AC2637379', 18],
     },
     baseLaunchDate: new Date('2022-03-31 21:30:00Z'),
     bondLaunchesAt: new Date('2020-12-03T15:00:00Z'),
@@ -84,19 +84,20 @@ export const genesisDefinitions: { [contractName: string]: BankInfo } = {
     sectionInUI: 0,
     contract: 'TombFtmRewardPool',
     depositTokenName: 'WFTM',
-    earnTokenName: '2OMB',
+    earnTokenName: 'MOON',
     multiplier: "100x",
     finished: false,
     sort: 1,
     closedForStaking: false,
   },
+
   TombWethRewardPool: {
     name: 'Stake wETH, earn 2OMB',
     poolId: 1,
     sectionInUI: 0,
     contract: 'TombWethGenesisRewardPool',
     depositTokenName: 'WETH',
-    earnTokenName: '2OMB',
+    earnTokenName: 'MOON',
     multiplier: "50x",
     finished: false,
     sort: 2,
@@ -143,13 +144,14 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
   finished: will disable the pool on the UI if set to true
   sort: the order of the pool
   */
+
   TombFtmRewardPool: {
-    name: 'Stake WFTM, earn 2OMB',
+    name: 'Stake WFTM, earn MOON',
     poolId: 0,
     sectionInUI: 0,
     contract: 'TombFtmRewardPool',
     depositTokenName: 'WFTM',
-    earnTokenName: 'XOMB',
+    earnTokenName: 'MOON',
     multiplier: "100x",
     finished: false,
     sort: 1,
@@ -157,22 +159,23 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     genesisFinished: false
   },
 
-  /*
+  
   TombWethRewardPool: {
-    name: 'Stake wETH, earn 2OMB',
+    name: 'Stake MIM, earn MOON',
     poolId: 1,
     sectionInUI: 0,
     contract: 'TombWethGenesisRewardPool',
-    depositTokenName: 'WETH',
-    earnTokenName: 'XOMB',
+    depositTokenName: 'MIM',
+    earnTokenName: 'MOON',
     multiplier: "50x",
     finished: false,
     sort: 2,
     closedForStaking: false,
     genesisFinished: false
   },
-  */
+  
  
+  /*
   TombShibaRewardPool: {
     name: 'Stake MIM, earn 2OMB',
     poolId: 2,
@@ -186,6 +189,9 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     closedForStaking: false,
     genesisFinished: false
   },
+*/
+
+ /*
   TombTombRewardPool: {
     name: 'Stake TOMB, earn 2OMB',
     poolId: 3,
@@ -199,13 +205,15 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     closedForStaking: false,
     genesisFinished: false
   },
+*/
+
   TombFtmLPTombRewardPool: {
-    name: 'Earn MOON by 2OMB-WFTM',
+    name: 'Earn MOON by MOON-WFTM',
     poolId: 0,
     sectionInUI: 1,
     contract: 'TombFtmLpTombRewardPool',
-    depositTokenName: '2OMB-FTM-LP',
-    earnTokenName: '2OMB',
+    depositTokenName: 'MOON-FTM-LP',
+    earnTokenName: 'MOON',
     multiplier: "1000x",
     finished: false,
     sort: 5,
@@ -228,8 +236,8 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     poolId: 0,
     sectionInUI: 2,
     contract: 'TombFtmLPTShareRewardPool',
-    depositTokenName: 'XOMB-FTM-LP',
-    earnTokenName: 'XSHARES',
+    depositTokenName: 'MOON-FTM-LP',
+    earnTokenName: 'MSHARES',
     multiplier: "3000x",
     finished: false,
     sort: 6,
@@ -240,8 +248,8 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     poolId: 1,
     sectionInUI: 2,
     contract: 'TshareFtmLPTShareRewardPool',
-    depositTokenName: 'XSHARES-FTM-LP',
-    earnTokenName: 'XSHARES',
+    depositTokenName: 'MSHARES-FTM-LP',
+    earnTokenName: 'MSHARES',
     multiplier: "2400x",
     finished: false,
     sort: 7,

@@ -46,8 +46,8 @@ const useStyles = makeStyles((theme) => ({
 const Home = () => {
   const classes = useStyles();
   const TVL = useTotalValueLocked();
-  const tombFtmLpStats = useLpStats('XOMB-FTM-LP');
-  const tShareFtmLpStats = useLpStats('XSHARES-FTM-LP');
+  const tombFtmLpStats = useLpStats('MOON-FTM-LP');
+  const tShareFtmLpStats = useLpStats('MSHARES-FTM-LP');
   const tombStats = useTombStats();
   const tShareStats = usetShareStats();
   const tBondStats = useBondStats();
@@ -64,7 +64,7 @@ const Home = () => {
     tShare = tShareProd;
   }
 
-  const buyTombAddress = 'https://spookyswap.finance/swap?outputCurrency=0x7a6e4e3cc2ac9924605dca4ba31d1831c84b44ae'
+  const buyTombAddress = 'https://spookyswap.finance/swap?outputCurrency=0x76a10A9A4450Afea32b1576f017585425B452768'
   const buyTShareAddress = 'https://spookyswap.finance/swap?outputCurrency=' + tShare.address;
 
   const tombLPStats = useMemo(() => (tombFtmLpStats ? tombFtmLpStats : null), [tombFtmLpStats]);
@@ -102,8 +102,8 @@ const Home = () => {
   );
   const tBondTotalSupply = useMemo(() => (tBondStats ? String(tBondStats.totalSupply) : null), [tBondStats]);
 
-  const tombLpZap = useZap({ depositTokenName: 'XOMB-FTM-LP' });
-  const tshareLpZap = useZap({ depositTokenName: 'XSHARES-FTM-LP' });
+  const tombLpZap = useZap({ depositTokenName: 'MOON-FTM-LP' });
+  const tshareLpZap = useZap({ depositTokenName: 'MSHARES-FTM-LP' });
 
   const StyledLink = styled.a`
     font-weight: 700;
@@ -119,7 +119,7 @@ const Home = () => {
         tombLpZap.onZap(zappingToken, tokenName, amount);
         onDissmissTombZap();
       }}
-      tokenName={'XOMB-FTM-LP'}
+      tokenName={'MOON-FTM-LP'}
     />,
   );
 
@@ -131,7 +131,7 @@ const Home = () => {
         tshareLpZap.onZap(zappingToken, tokenName, amount);
         onDissmissTshareZap();
       }}
-      tokenName={'XSHARES-FTM-LP'}
+      tokenName={'MSHARES-FTM-LP'}
     />,
   );
 
@@ -212,13 +212,13 @@ const Home = () => {
               {/* <Button variant="contained" target="_blank" href={buyTShareAddress} className={classes.button}>
                 Buy 2SHARE
               </Button> */}
-              <Button color="primary" target="_blank" href="https://spookyswap.finance/swap?outputCurrency=0xc54a1684fd1bef1f077a336e6be4bd9a3096a6ca" variant="contained" style={{ marginRight: '25px' }}>
+              <Button color="primary" target="_blank" href="https://spookyswap.finance/swap?outputCurrency=0x912b4BA05BE04784808635f0319D361fB0ecf785" variant="contained" style={{ marginRight: '25px' }}>
                 Buy MSHARES
               </Button>
-              <Button color="primary" target="_blank" href="https://dexscreener.com/fantom/0xbdc7dfb7b88183e87f003ca6b5a2f81202343478" variant="contained" style={{ marginRight: '25px' }}>
+              <Button color="primary" target="_blank" href="https://dexscreener.com/fantom/0x76a10A9A4450Afea32b1576f017585425B452768" variant="contained" style={{ marginRight: '25px' }}>
                 MOON Chart
               </Button>
-              <Button color="primary" target="_blank" href="https://dexscreener.com/fantom/0xc54A1684fD1bef1f077a336E6be4Bd9a3096a6Ca" variant="contained" style={{ marginRight: '25px' }}>
+              <Button color="primary" target="_blank" href="https://dexscreener.com/fantom/0x912b4BA05BE04784808635f0319D361fB0ecf785" variant="contained" style={{ marginRight: '25px' }}>
                 MSHARES Chart
               </Button>
             </CardContent>

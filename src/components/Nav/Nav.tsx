@@ -138,9 +138,11 @@ const Nav = () => {
               {/* <a target="_blank" href="https://docs.2omb.finance/contracts/tokens" className={classes.link}>
                 Contracts
               </a> */}
+               {/*
               <a target="_blank" href="https://moonfi0305.gitbook.io/moon-finance-docs/" className={classes.link}>
                 Docs
               </a>
+              */}
               {/*<a target="_blank" href="https://3omb.finance/" className={classes.link}>
                 3omb
               </a>*/}

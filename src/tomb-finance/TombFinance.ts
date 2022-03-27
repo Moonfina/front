@@ -48,13 +48,13 @@ export class TombFinance {
     for (const [symbol, [address, decimal]] of Object.entries(externalTokens)) {
       this.externalTokens[symbol] = new ERC20(address, provider, symbol, decimal);
     }
-    this.TOMB = new ERC20(deployments.tomb.address, provider, 'XOMB');
-    this.TSHARE = new ERC20(deployments.tShare.address, provider, 'XSHARES');
+    this.TOMB = new ERC20(deployments.tomb.address, provider, 'MOON');
+    this.TSHARE = new ERC20(deployments.tShare.address, provider, 'MSHARES');
     this.TBOND = new ERC20(deployments.tBond.address, provider, 'XBOND');
     this.FTM = this.externalTokens['WFTM'];
 
     // Uniswap V2 Pair
-    this.TOMBWFTM_LP = new Contract(externalTokens['XOMB-FTM-LP'][0], IUniswapV2PairABI, provider);
+    this.TOMBWFTM_LP = new Contract(externalTokens['MOON-FTM-LP'][0], IUniswapV2PairABI, provider);
 
     this.config = cfg;
     this.provider = provider;
@@ -126,8 +126,8 @@ export class TombFinance {
     const lpToken = this.externalTokens[name];
     const lpTokenSupplyBN = await lpToken.totalSupply();
     const lpTokenSupply = getDisplayBalance(lpTokenSupplyBN, 18);
-    const token0 = name.startsWith('XOMB') ? this.TOMB : this.TSHARE;
-    const isTomb = name.startsWith('XOMB');
+    const token0 = name.startsWith('MOON') ? this.TOMB : this.TSHARE;
+    const isTomb = name.startsWith('MOON');
     const tokenAmountBN = await token0.balanceOf(lpToken.address);
     const tokenAmount = getDisplayBalance(tokenAmountBN, 18);
 
@@ -237,7 +237,7 @@ export class TombFinance {
     const stakeInPool = await depositToken.balanceOf(bank.address);
     console.log("stake in pool:", stakeInPool);
     const TVL = Number(depositTokenPrice) * Number(getDisplayBalance(stakeInPool, depositToken.decimal));
-    const stat = bank.earnTokenName === 'XOMB' ? await this.getTombStat() : await this.getShareStat();
+    const stat = bank.earnTokenName === 'MOON' ? await this.getTombStat() : await this.getShareStat();
     const tokenPerSecond = await this.getTokenPerSecond(
       bank.earnTokenName,
       bank.contract,
@@ -273,7 +273,7 @@ export class TombFinance {
     poolContract: Contract,
     depositTokenName: string,
   ) {
-    if (earnTokenName === 'XOMB') {
+    if (earnTokenName === 'MOON') {
       if (!contractName.endsWith('TombRewardPool')) {
         const rewardPerSecond = (await poolContract.tombPerSecond()).mul(20);
         if (depositTokenName === 'WFTM') {
@@ -296,9 +296,9 @@ export class TombFinance {
       return await poolContract.epochTombPerSecond(0);
     }
     const rewardPerSecond = await poolContract.tSharePerSecond();
-    if (depositTokenName.startsWith('XOMB-FTM')) {
+    if (depositTokenName.startsWith('MOON-FTM')) {
       return rewardPerSecond.mul(30000).div(59500);
-    } else if (depositTokenName.startsWith('XSHARES-FTM')) {
+    } else if (depositTokenName.startsWith('MSHARES-FTM')) {
       return rewardPerSecond.mul(24000).div(59500);
     } else {
       return rewardPerSecond.mul(5500).div(59500)
@@ -319,11 +319,11 @@ export class TombFinance {
     if (tokenName === 'WFTM') {
       tokenPrice = priceOfOneFtmInDollars;
     } else {
-      if (tokenName === 'XOMB-FTM-LP') {
+      if (tokenName === 'MOON-FTM-LP') {
         tokenPrice = await this.getLPTokenPrice(token, this.TOMB, true);
-      } else if (tokenName === 'XSHARES-FTM-LP') {
+      } else if (tokenName === 'MSHARES-FTM-LP') {
         tokenPrice = await this.getLPTokenPrice(token, this.TSHARE, false);
-      } else if (tokenName === "XOMB-XSHARES-LP") {
+      } else if (tokenName === "MOON-MSHARES-LP") {
         tokenPrice = await this.getLPTokenPrice(token, this.TOMB, true);
       } else if (tokenName === 'SHIBA') {
         tokenPrice = await this.getTokenPriceFromSpiritswap(token);
@@ -433,7 +433,7 @@ export class TombFinance {
   ): Promise<BigNumber> {
     const pool = this.contracts[poolName];
     try {
-      if (earnTokenName === 'XOMB') {
+      if (earnTokenName === 'MOON') {
         // problem is pendingTOMB isnt a function since the abi still says pendingTOMB
         return await pool.pendingTOMB(poolId, account);
       } else {

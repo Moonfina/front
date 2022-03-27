@@ -44,8 +44,8 @@ const Cemetery = () => {
                   <Typography color="textPrimary" variant="h4" gutterBottom>
                     Earn MSHARE by staking LP
                   </Typography>
-                  <Alert variant="filled" severity="success">
-                    MSHARE incentives have started! Good luck!
+                  <Alert variant="filled" severity="warning">
+                  Mshares Reward Pool will start on 04-02-15:00 UTC!
                   </Alert>
                   <Grid container spacing={3} style={{ marginTop: '20px' }}>
                     {activeBanks
@@ -60,10 +60,10 @@ const Cemetery = () => {
 
                  <div hidden={activeBanks.filter((bank) => bank.sectionInUI === 1).length === 0}>
                   <Typography color="textPrimary" variant="h4" gutterBottom style={{ marginTop: '20px' }}>
-                    Earn 2OMB by staking 2OMB-WFTM
+                    Earn MOON by staking MOON-WFTM
                   </Typography>
                   <Alert variant="filled" severity="warning">
-                    All below pools have ended. Please unstake and collect your rewards.
+                  Moon Reward Pool will start on 04-02-15:00 UTC!
                   </Alert>
                   <Grid container spacing={3} style={{ marginTop: '20px' }}>
                     {activeBanks
@@ -81,7 +81,7 @@ const Cemetery = () => {
                     Genesis Pools
                   </Typography>
                   <Alert variant="filled" severity="warning">
-                    Genesis Pools have ENDED. Please withdraw your funds.
+                    Genesis Pools will start on 03-30-15:00 UTC!
                   </Alert>
                   {/* <Typography color="textPrimary" variant="h4" gutterBottom>
                     Decentralized Initial Supply Distribution

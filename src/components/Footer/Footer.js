@@ -68,7 +68,7 @@ const Footer = () => {
             >
               <img alt="github" src={GithubImage} className={classes.img} />
             </a>
-            <a href="https://discord.gg/2omb" rel="noopener noreferrer" target="_blank" className={classes.link}>
+            <a href="https://discord.gg/" rel="noopener noreferrer" target="_blank" className={classes.link}>
               <img alt="discord" src={DiscordImage} className={classes.img} />
             </a>
           </Grid>

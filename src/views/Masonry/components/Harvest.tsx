@@ -37,11 +37,11 @@ const Harvest: React.FC = () => {
           <StyledCardContentInner>
             <StyledCardHeader>
               <CardIcon>
-                <TokenSymbol symbol="XOMB" />
+                <TokenSymbol symbol="MOON" />
               </CardIcon>
               <Value value={getDisplayBalance(earnings)} />
               <Label text={`≈ $${earnedInDollars}`} />
-              <Label text="XOMB Earned" />
+              <Label text="MOON Earned" />
             </StyledCardHeader>
             <StyledCardActions>
               <Button

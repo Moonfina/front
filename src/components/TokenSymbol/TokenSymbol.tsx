@@ -41,9 +41,9 @@ const logosBySymbol: { [title: string]: string } = {
   '2SHARE-FTM-LP': tshareFtmLpLogo,
   '2OMB-2SHARE-LP': tombtshares,
   'USDC': usdc,
-  'XOMB-FTM-LP':tombFtmLpLogo,
-  'XSHARES-FTM-LP':tshareFtmLpLogo,
-  'XOMB-XSHARES-LP':tombtshares,
+  'MOON-FTM-LP':tombFtmLpLogo,
+  'MSHARES-FTM-LP':tshareFtmLpLogo,
+  'MOON-MSHARES-LP':tombtshares,
 };
 
 type LogoProps = {
