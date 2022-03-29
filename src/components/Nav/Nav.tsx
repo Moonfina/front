@@ -138,11 +138,11 @@ const Nav = () => {
               {/* <a target="_blank" href="https://docs.2omb.finance/contracts/tokens" className={classes.link}>
                 Contracts
               </a> */}
-               {/*
-              <a target="_blank" href="https://moonfi0305.gitbook.io/moon-finance-docs/" className={classes.link}>
+               
+              <a target="_blank" href="https://moonfi0305.gitbook.io/moon-finance-docs-english/" className={classes.link}>
                 Docs
               </a>
-              */}
+              
               {/*<a target="_blank" href="https://3omb.finance/" className={classes.link}>
                 3omb
               </a>*/}
@@ -190,9 +190,9 @@ const Nav = () => {
                 {/* <ListItemLink primary="SBS" to="/sbs" />
                 <ListItemLink primary="Liquidity" to="/liquidity" />
                 <ListItemLink primary="Regulations" to="/regulations" /> */}
-                 {/*<ListItem button component="a" href="https://moonfi0305.gitbook.io/moon-finance-docs/">
+                 <ListItem button component="a" href="https://moonfi0305.gitbook.io/moon-finance-docs/">
                   <ListItemText>DOCS</ListItemText>
-                </ListItem>*/}
+                </ListItem>
                 <ListItem style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <AccountButton text="Connect" />
                 </ListItem>
