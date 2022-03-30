@@ -80,8 +80,8 @@ const Cemetery = () => {
                   <Typography color="textPrimary" variant="h4" gutterBottom style={{ marginTop: '20px' }}>
                     Genesis Pools
                   </Typography>
-                  <Alert variant="filled" severity="warning">
-                    Genesis Pools will start on 03-30-15:00 UTC!
+                  <Alert variant="filled" severity="success">
+                    Genesis Pools is started!Continues until 04-02 15:00 UTC!
                   </Alert>
                   {/* <Typography color="textPrimary" variant="h4" gutterBottom>
                     Decentralized Initial Supply Distribution
