@@ -1,6 +1,6 @@
-export const TOMB_TICKER = '2OMB';
-export const TSHARE_TICKER = '2SHARES';
-export const TBOND_TICKER = '2BOND';
+export const TOMB_TICKER = 'MOON';
+export const TSHARE_TICKER = 'MSHARES';
+export const TBOND_TICKER = 'MBOND';
 export const FTM_TICKER = 'FTM';
 export const WFTM_TICKER = 'WFTM';
 export const SPOOKY_ROUTER_ADDR = '0xF491e7B69E4244ad4002BC14e878a34207E38c29';
