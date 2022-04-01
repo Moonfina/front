@@ -115,7 +115,7 @@ const LPTokenHelpText: React.FC<{ bank: BankEntity }> = ({ bank }) => {
   let uniswapUrl: string;
   if (bank.depositTokenName.startsWith("MOON-FTM")) {
     pairName = 'MOON-FTM pair';
-    uniswapUrl = 'https://spookyswap.finance/add/FTM/0x7a6e4e3cc2ac9924605dca4ba31d1831c84b44ae';
+    uniswapUrl = 'https://spookyswap.finance/add/FTM/0x76a10A9A4450Afea32b1576f017585425B452768';
   } else if (bank.depositTokenName.startsWith("2SHARE-FTM")) {
     pairName = 'MSHARES-FTM pair';
     uniswapUrl = 'https://spookyswap.finance/add/FTM/' + tshareAddr;
