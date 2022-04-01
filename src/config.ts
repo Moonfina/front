@@ -167,7 +167,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     contract: 'TombWethGenesisRewardPool',
     depositTokenName: 'MIM',
     earnTokenName: 'MOON',
-    multiplier: "50x",
+    multiplier: "1000x",
     finished: false,
     sort: 2,
     closedForStaking: false,
@@ -175,21 +175,21 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
   },
   
  
-  /*
+  
   TombShibaRewardPool: {
-    name: 'Stake MIM, earn 2OMB',
+    name: 'Stake MOON-FTM LP, earn MOON',
     poolId: 2,
     sectionInUI: 0,
     contract: 'TombShibaGenesisRewardPool',
-    depositTokenName: 'MIM',
-    earnTokenName: 'XOMB',
-    multiplier: "25x",
+    depositTokenName: 'MOON-FTM-LP',
+    earnTokenName: 'MOON',
+    multiplier: "800x",
     finished: false,
     sort: 3,
     closedForStaking: false,
     genesisFinished: false
   },
-*/
+
 
  /*
   TombTombRewardPool: {
