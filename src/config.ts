@@ -167,7 +167,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     contract: 'TombWethGenesisRewardPool',
     depositTokenName: 'MIM',
     earnTokenName: 'MOON',
-    multiplier: "1000x",
+    multiplier: "100x",
     finished: false,
     sort: 2,
     closedForStaking: false,
