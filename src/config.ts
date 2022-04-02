@@ -208,7 +208,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
 */
 
   TombFtmLPTombRewardPool: {
-    name: 'Earn MOON by MOON-WFTM',
+    name: 'Earn MOON by MOON-FTM',
     poolId: 0,
     sectionInUI: 1,
     contract: 'TombFtmLpTombRewardPool',
@@ -232,7 +232,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     closedForStaking: true,
   },
   TombFtmLPTShareRewardPool: {
-    name: 'Earn MSHARE by MOON-WFTM LP',
+    name: 'Earn MSHARE by MOON-FTM LP',
     poolId: 0,
     sectionInUI: 2,
     contract: 'TombFtmLPTShareRewardPool',
@@ -244,7 +244,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     closedForStaking: false,
   },
   TshareFtmLPTShareRewardPool: {
-    name: 'Earn MSHARE by MSHARE-WFTM LP',
+    name: 'Earn MSHARE by MSHARE-FTM LP',
     poolId: 1,
     sectionInUI: 2,
     contract: 'TshareFtmLPTShareRewardPool',

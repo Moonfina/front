@@ -116,11 +116,11 @@ const LPTokenHelpText: React.FC<{ bank: BankEntity }> = ({ bank }) => {
   if (bank.depositTokenName.startsWith("MOON-FTM")) {
     pairName = 'MOON-FTM pair';
     uniswapUrl = 'https://spookyswap.finance/add/FTM/0x76a10A9A4450Afea32b1576f017585425B452768';
-  } else if (bank.depositTokenName.startsWith("2SHARE-FTM")) {
+  } else if (bank.depositTokenName.startsWith("MSHARES-FTM")) {
     pairName = 'MSHARES-FTM pair';
     uniswapUrl = 'https://spookyswap.finance/add/FTM/' + tshareAddr;
   } else {
-    pairName = "MOON-2SHARE pair";
+    pairName = "MOON-MSHARE pair";
     uniswapUrl = 'https://spookyswap.finance/add/' + tombAddr + '/' + tshareAddr;
   }
   //waiting on jun LFG
