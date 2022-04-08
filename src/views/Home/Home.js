@@ -148,13 +148,18 @@ const Home = () => {
         <Grid item xs={12} sm={8}>
           <Paper>
             <Box p={4}>
-              <h2>Welcome to Moon Finance!</h2>
-              <p>Pegged to the price of 1 FTM via seigniorage.</p>
+              <h2>Please Withdraw your Staking tokens</h2>
+              <p><font color='yellow'>we have decided to renew the website and contracts in order to recover the demand for MOON tokens.
+Therefore, we will temporarily close the Website within 7 days(-2022.04.13), 
+so we would appreciate it if you could withdraw the staking tokens.</font></p>
+
+
+ {/*
               <p><font color='yellow'>GenesisPool Start = 2022-03-30 15:00 UTC</font></p>
               <p><font color='yellow'>GenesisPool End = 2022-04-02 15:00 UTC</font></p>
               <p><font color='yellow'>Tshares RewardPool start = 2022-04-02 15:00 UTC</font></p>
               <p><font color='yellow'>Boardroom start = 2022-04-03 15:00 UTC</font></p>
-              {/*<p>
+             <p>
               <StyledLink href="/farms">Stake</StyledLink> your MOON-FTM LP tokens to earn MSHARE seigniorage rewards.
               </p>
               <p>To maximize profits, stake your harvested MSHAREs in the <StyledLink href="/boardroom">Boardroom</StyledLink> to earn more MOON!</p>
